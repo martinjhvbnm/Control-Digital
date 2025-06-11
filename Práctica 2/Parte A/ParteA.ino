@@ -1,98 +1,86 @@
-// Práctica 2: Encendido y apagado de un LED del tablero mediante dos botones
-#include <Controllino.h> //Librería de controllino
+#include <Controllino.h>
 
-//const int led             = CONTROLLINO_D0;    // Salida D0 del controllino
-const int boton_encendido = CONTROLLINO_I16;   // Entrada I16 del controllino
-const int boton_apagado   = CONTROLLINO_I17;   // Entrada I17 del controllino
-const int boton_reinicio   = CONTROLLINO_I18;   // Entrada I17 del controllino
+// Botones de control
+const int boton_secuencia1 = CONTROLLINO_I16;
+const int boton_secuencia2 = CONTROLLINO_I17;
+const int boton_reinicio   = CONTROLLINO_I18;
 
-int leds[10] = {CONTROLLINO_D7,CONTROLLINO_D0, CONTROLLINO_D6, CONTROLLINO_D12, CONTROLLINO_D13, CONTROLLINO_D14, CONTROLLINO_D8, CONTROLLINO_D2, CONTROLLINO_D1,CONTROLLINO_D7};
-int leds2[10] = {CONTROLLINO_D0, CONTROLLINO_D7,CONTROLLINO_D1, CONTROLLINO_D2, CONTROLLINO_D8, CONTROLLINO_D14, CONTROLLINO_D13, CONTROLLINO_D12, CONTROLLINO_D6,CONTROLLINO_D0};
-int tiempo_ms=500;
-unsigned long t_anterior=0;
-int contador=0;
-int contador2=0;
-int bandera=2;
+// Arreglos con secuencias de LEDs
+int leds1[10] = {
+  CONTROLLINO_D7, CONTROLLINO_D0, CONTROLLINO_D6,
+  CONTROLLINO_D12, CONTROLLINO_D13, CONTROLLINO_D14,
+  CONTROLLINO_D8, CONTROLLINO_D2, CONTROLLINO_D1, CONTROLLINO_D7
+};
 
+int leds2[10] = {
+  CONTROLLINO_D0, CONTROLLINO_D7, CONTROLLINO_D1,
+  CONTROLLINO_D2, CONTROLLINO_D8, CONTROLLINO_D14,
+  CONTROLLINO_D13, CONTROLLINO_D12, CONTROLLINO_D6, CONTROLLINO_D0
+};
 
+const int tiempo_ms = 500;
+unsigned long t_anterior = 0;
+int contador = 0;
+int bandera = 2;  // 1 = secuencia 1, 0 = secuencia 2, 2 = apagado
 
 void setup() {
-// pinMode(led, OUTPUT);   // led como salida
-  pinMode(boton_encendido, INPUT);  // boton_encendido como entrada
-  pinMode(boton_apagado, INPUT);  // boton_apagado como entrada
-  pinMode(boton_reinicio, INPUT);  // boton_apagado como entrada
-  pinMode(CONTROLLINO_D0, OUTPUT);  // Salida digital D0
-  pinMode(CONTROLLINO_D1, OUTPUT);  // Salida digital D1
-  pinMode(CONTROLLINO_D2, OUTPUT);  // Salida digital D2
-  pinMode(CONTROLLINO_D6, OUTPUT);  // Salida digital D6
-  pinMode(CONTROLLINO_D7, OUTPUT);  // Salida digital D7
-  pinMode(CONTROLLINO_D8, OUTPUT);  // Salida digital D8
-  pinMode(CONTROLLINO_D12, OUTPUT); // Salida digital D12
-  pinMode(CONTROLLINO_D13, OUTPUT); // Salida digital D13
-  pinMode(CONTROLLINO_D14, OUTPUT); // Salida digital D14
+  // Configurar pines de LED como salida y apagarlos
+  for (int i = 0; i < 10; i++) {
+    pinMode(leds1[i], OUTPUT);
+    pinMode(leds2[i], OUTPUT);
+    digitalWrite(leds1[i], LOW);
+    digitalWrite(leds2[i], LOW);
+  }
+
+  // Configurar botones como entrada
+  pinMode(boton_secuencia1, INPUT);
+  pinMode(boton_secuencia2, INPUT);
+  pinMode(boton_reinicio, INPUT);
 }
 
 void loop() {
-     unsigned long t_actual=millis();
-     if (digitalRead(boton_encendido) == HIGH ) {
-    // digitalWrite(led, HIGH);  // Encender LED
-    bandera=1;
-    digitalWrite(leds2[contador2], LOW);
-    digitalWrite(leds[contador], LOW);
-    contador=0;
-    contador2=0;
-  }
-    if (digitalRead(boton_apagado) == HIGH ) {
-      // digitalWrite(led, HIGH);  // Encender LED
-      bandera=0;
-      digitalWrite(leds2[contador2], LOW);
-      digitalWrite(leds[contador], LOW);
-      contador=0;
-      contador2=0;
-  }
-  if (digitalRead(boton_reinicio) == HIGH ) {
-    // digitalWrite(led, HIGH);  // Encender LED
-    bandera=2;}
+  unsigned long t_actual = millis();
 
-if (t_actual - t_anterior >= tiempo_ms){
-  // Encender el led con el botonI16
-  if(bandera==1){
-    if (contador<9){
-      digitalWrite(leds[contador], LOW);
-      digitalWrite(leds[contador+1], HIGH);
-            contador++;
-    }else{
+  // Cambiar bandera según botón presionado
+  if (digitalRead(boton_secuencia1) == HIGH) {
+    bandera = 1;
+    contador = 0;
+  }
+  if (digitalRead(boton_secuencia2) == HIGH) {
+    bandera = 0;
+    contador = 0;
+  }
+  if (digitalRead(boton_reinicio) == HIGH) {
+    bandera = 2;
+    contador = 0;
 
-      contador =0;
-      digitalWrite(leds[contador], LOW);
-      digitalWrite(leds[contador+1], HIGH);
-    contador=1;
+    // Apagar todos los LEDs de ambas secuencias
+    for (int i = 0; i < 10; i++) {
+      digitalWrite(leds1[i], LOW);
+      digitalWrite(leds2[i], LOW);
     }
   }
-  else if(bandera==0){ 
-        if (contador2<9){
-      digitalWrite(leds2[contador2], LOW);
-      digitalWrite(leds2[contador2+1], HIGH);
-            contador2++;
-    }else{
 
-      contador2=0;
-      digitalWrite(leds2[contador2], LOW);
-      digitalWrite(leds2[contador2+1], HIGH);
-    contador2=1;
+  // Temporización no bloqueante
+  if (t_actual - t_anterior >= tiempo_ms) {
+    t_anterior = t_actual;
+
+    // Apagar todos los LEDs primero
+    for (int i = 0; i < 10; i++) {
+      digitalWrite(leds1[i], LOW);
+      digitalWrite(leds2[i], LOW);
     }
 
+    // Encender uno solo dependiendo de la secuencia activa
+    if (bandera == 1) {
+      digitalWrite(leds1[contador], HIGH);
+    } else if (bandera == 0) {
+      digitalWrite(leds2[contador], HIGH);
+    }
+
+    // Avanzar al siguiente LED
+    contador = (contador + 1) % 10;
   }
-  else{
-    digitalWrite(leds2[contador2], LOW);
-    digitalWrite(leds[contador], LOW);
-    contador=0;
-    contador2=0;
 
-  };
-        t_anterior=t_actual;
-
-  }
-
-  delay(10); // Pequeño retardo para evitar rebotes
+  delay(10); // Antirebote básico
 }
