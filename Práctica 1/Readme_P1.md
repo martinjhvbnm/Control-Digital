@@ -21,4 +21,10 @@ secuencial básica en automatización.
 | LED7  | LED8  | LED9  |
 - Orden de encendido:  1 → 2 → 3 → 6 → 9 → 8 → 7 → 4 → 5 y se repite.
 - Asigna un pin digital a cada LED usando variables predefinidas de la librería  _Controllino.h_.
+- CadaLEDdebeencenderse durante 500 ms y luego apagarse, justo en ese  instante se enciende el siguiente.
+- Al finalizar, la secuencia se debe reiniciar.
+### Requisitos:
+ -Usar punteros.
+ -Usar retardos no bloqueantes.
+ 
 
