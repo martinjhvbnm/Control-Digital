@@ -4,20 +4,20 @@
 ![Circulacion vehicular simple ](image.png)
 
 ---
-## ⚙️ Materiales requerido
-
-- Placa **Controllino Mega**
-- 6 LEDs (divididos en dos conjuntos):
+## ⚙️ Materiales requeridos
+- Tablero de control con Controllino Mega integrado.
+- Fuente de alimentación del tablero.
+- Cable USB tipo B 2.0.
+- PC con Arduino IDE instalado y configurado para Controlli
+- 6 LEDs del tablero (divididos en dos conjuntos):
   - Primer conjunto: **LED_ROJO**, **LED_AMARILLO** y **LED_VERDE**
   - Segundo conjunto: **LED_ROJO2**, **LED_AMARILLO2** y **LED_VERDE2**
 ---
-## 🧠 Objetivo
+## 🧠 Requisitos:
 
 El objetivo es demostrar el uso de:
 - **Máquinas de estados** mediante `enum` y `switch`.
 - **Temporización no bloqueante** con `millis()`.
-- **Manipulación de múltiples salidas digitales** (LEDs) en la plataforma Controllino.
-
 ---
 
 ## 🔍 Descripción del Código
@@ -47,3 +47,4 @@ El código se divide en dos partes principales:
     VERDE,
     AMARILLO
   };
+  
