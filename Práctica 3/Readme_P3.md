@@ -72,10 +72,8 @@ La comunicación se gestiona con funciones `HMI_get_value` y `Stone_HMI_Set_Valu
 2. **Botones físicos**:
    - Se detectan flancos ascendentes para cambiar el estado de cada LED (encendido ↔ apagado).
    - Se usa una bandera por LED (`bandera`, `bandera2`) para rastrear su estado.
-
 3. **Control PWM**:
    - Solo si el LED está encendido (bandera == 1), se lee el valor del HMI y se mapea de 0–100 a 0–255 para el `analogWrite`.
-   - Si no está encendido, se muestra un mensaje de advertencia por el monitor serial.
 ---
 ## Archivos
 
