@@ -42,7 +42,7 @@ Este sistema permite:
   - `spin_box1`: controla el duty cycle de LED1
   - `spin_box2`: controla el duty cycle de LED2
 - Mostrar los valores PWM correspondientes en el monitor serial para depuración
-
+---
 ## Configuración del sistema
 
 ### Pines utilizados en el Controllino:
@@ -76,7 +76,7 @@ La comunicación se gestiona con funciones `HMI_get_value` y `Stone_HMI_Set_Valu
 3. **Control PWM**:
    - Solo si el LED está encendido (bandera == 1), se lee el valor del HMI y se mapea de 0–100 a 0–255 para el `analogWrite`.
    - Si no está encendido, se muestra un mensaje de advertencia por el monitor serial.
-
+---
 ## Archivos
 
 - `main.ino`: Código principal del sistema
