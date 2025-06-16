@@ -23,11 +23,16 @@ la secuencia con un tercer botón.
 | Botón Secuencia 1     | `CONTROLLINO_I16` |
 | Botón Secuencia 2     | `CONTROLLINO_I17` |
 | Botón Reinicio        | `CONTROLLINO_I18` |
-| Salidas LEDs (secuencia) | `D0`, `D1`, `D2`, `D6`, `D7`, `D8`, `D12`, `D13`, `D14` |
+| Salidas LEDs (secuencia) | `CONTROLLINO_D7`, `CONTROLLINO_D0`, `CONTROLLINO_D6`,
+  `CONTROLLINO_D12`, `CONTROLLINO_D13`, `CONTROLLINO_D14`,
+  `CONTROLLINO_D8`, `CONTROLLINO_D2`, `CONTROLLINO_D1`, `CONTROLLINO_D7` |
+| Salidas LEDs (secuencia) | `CONTROLLINO_D0`, `CONTROLLINO_D7`, `CONTROLLINO_D1`,
+  `CONTROLLINO_D2`, `CONTROLLINO_D8`, `CONTROLLINO_D14`,
+  `CONTROLLINO_D13`, `CONTROLLINO_D12`, `CONTROLLINO_D6`, `CONTROLLINO_D0` |  
 
 ---
 
-## 🔄 Comportamiento
+## Comportamiento
 
 - Al presionar el **botón de secuencia 1**, se encienden los LEDs en el orden definido por el arreglo `leds1[]`.
 - Al presionar el **botón de secuencia 2**, los LEDs se encienden siguiendo el orden en `leds2[]`.
