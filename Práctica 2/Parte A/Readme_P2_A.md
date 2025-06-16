@@ -1,16 +1,16 @@
-# 🔁 Secuencias de LEDs con Controllino
+#  Secuencias de LEDs con Controllino
 
 Este proyecto implementa un sistema de **dos secuencias de encendido de LEDs** utilizando la placa **Controllino**. El usuario puede seleccionar entre dos patrones de iluminación presionando botones físicos, y también puede detener la secuencia con un tercer botón.
 
 ---
 
-## 🧠 Objetivo
+## Objetivo
 
 Implementar control digital de salidas utilizando **temporización no bloqueante (`millis`)**, **arreglos** y **lectura de botones** en una placa **Controllino**. Este tipo de control es útil en sistemas industriales donde múltiples salidas deben activarse en orden con tiempos definidos.
 
 ---
 
-## ⚙️ Hardware requerido
+##  Hardware requerido
 
 - 1 Placa **Controllino Mini / Maxi / Mega**
 - 10 salidas digitales conectadas a LEDs (con resistencias)
@@ -19,7 +19,7 @@ Implementar control digital de salidas utilizando **temporización no bloqueante
 
 ---
 
-## 🧩 Entradas y salidas
+##  Entradas y salidas
 
 | Elemento              | Pin Controllino |
 |-----------------------|------------------|
@@ -40,7 +40,7 @@ El sistema usa **temporización no bloqueante** con `millis()` para permitir una
 
 ---
 
-## 🧠 Lógica de control
+## Lógica de control
 
 ```cpp
 // Lectura de botones cambia la bandera
