@@ -29,9 +29,9 @@ secuencial básica en automatización.
 - Práctica1.ino
 ### Descripción del funcionamiento
 La descripción de cada módulo de software es la siguiente:
-- LED[10]: Vector que contiene la secuencia deseada
-- void setup:Funcion de configuracion, recorrer el vector mediante un for con las variables de los LEDs para establecer las mismas como salidas, se usa el retardo no bloqueante, para comparar el tiempo actual y el anterior para entrar a la condicion de apagar el led actual y encender el siguiente, ademas de incrementar en esta funcion recurrente un contador, y al finalizar actualiza el tiempo anterior con el actual. 
-- void loop(): Almacenar el tiempo actual, 
+- **LED[]:** Vector que contiene la secuencia deseada
+- **void setup:** Funcion de configuracion, recorrer el vector mediante un for con las variables de los LEDs para establecer las mismas como salidas. 
+- **void loop():** Se usa el retardo no bloqueante, para comparar el tiempo actual y el anterior para entrar a la condicion de apagar el led actual y encender el siguiente, ademas de incrementar en esta funcion recurrente un contador, y al finalizar actualiza el tiempo anterior con el actual. 
 
 
  
