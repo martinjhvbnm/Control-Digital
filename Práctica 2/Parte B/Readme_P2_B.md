@@ -4,7 +4,7 @@
 ![Circulacion vehicular simple ](image.png)
 
 ---
-## ⚙️ Materiales requeridos
+## Materiales requeridos
 - Tablero de control con Controllino Mega integrado.
 - Fuente de alimentación del tablero.
 - Cable USB tipo B 2.0.
@@ -13,14 +13,14 @@
   - Primer conjunto: **LED_ROJO**, **LED_AMARILLO** y **LED_VERDE**
   - Segundo conjunto: **LED_ROJO2**, **LED_AMARILLO2** y **LED_VERDE2**
 ---
-## 🧠 Requisitos:
+## Requisitos:
 
 El objetivo es demostrar el uso de:
 - **Máquinas de estados** mediante `enum` y `switch`.
 - **Temporización no bloqueante** con `millis()`.
 ---
 
-## 🔍 Descripción del Código
+## Descripción del Código
 
 El código se divide en dos partes principales:
 
