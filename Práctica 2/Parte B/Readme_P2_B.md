@@ -1,27 +1,22 @@
 # Práctica 2_B: Control de Semáforo con Controllino 
 
-En esta practica se diseña un sistema que controla dos semáforos (Semáforo A y Semáforo B) ubicados en una intersección perpendicular, 
-usando el enfoque de máquina de estados finita(FSM).El sistema debe simular el comportamiento  simple de los semáforos, de manera que
-nunca haya luz verde simultánea para ambos sentidos, y se respeten los tiempos estándar de duración de  cada luz.
----
+-  Se diseña un sistema que controle dos semáforos (Semáforo A y Semáforo B) ubicados en una intersección perpendicular, usando el enfoque de máquina de estados finita(FSM).El sistema debe simular el comportamiento simple de los semáforos, de manera que nunca haya luz verde simultánea para ambos sentidos, y se respeten los tiempos estándar de duración  de cada luz.
+![Circulacion vehicular simple ](imagene.png)
 
+---
+## ⚙️ Materiales requerido
+
+- Placa **Controllino Mega**
+- 6 LEDs (divididos en dos conjuntos):
+  - Primer conjunto: **LED_ROJO**, **LED_AMARILLO** y **LED_VERDE**
+  - Segundo conjunto: **LED_ROJO2**, **LED_AMARILLO2** y **LED_VERDE2**
+---
 ## 🧠 Objetivo
 
 El objetivo es demostrar el uso de:
 - **Máquinas de estados** mediante `enum` y `switch`.
 - **Temporización no bloqueante** con `millis()`.
 - **Manipulación de múltiples salidas digitales** (LEDs) en la plataforma Controllino.
-
----
-
-## ⚙️ Hardware Requerido
-
-- Placa **Controllino** (Mini, Maxi o Mega)
-- 6 LEDs (divididos en dos conjuntos):
-  - Primer conjunto: **LED_ROJO**, **LED_AMARILLO** y **LED_VERDE**
-  - Segundo conjunto: **LED_ROJO2**, **LED_AMARILLO2** y **LED_VERDE2**
-- Resistencias para limitar la corriente en cada LED
-- Cableado y protoboard
 
 ---
 
