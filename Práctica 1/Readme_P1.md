@@ -10,8 +10,10 @@ secuencial básica en automatización.
  - Fuente de alimentación del tablero.
  - Cable USB tipo B 2.0.
  - PC con Arduino IDE instalado y configurado para Controllino
-   
-## Reto
+## Requisitos:
+ - Usar punteros
+ - Usar retardos no bloqueantes.
+### Reto
  Usar el Controllino Mega para controlar un amatriz de 9 LEDs del tablero, dispuestos en una cuadrícula de 3x3. Los LEDs deben encenderse uno por uno siguiendo un  patrón en espiral, en el siguiente orden:
 
 | LED1  | LED2  | LED3  |
@@ -23,8 +25,6 @@ secuencial básica en automatización.
 - Asigna un pin digital a cada LED usando variables predefinidas de la librería  _Controllino.h_.
 - CadaLEDdebeencenderse durante 500 ms y luego apagarse, justo en ese  instante se enciende el siguiente.
 - Al finalizar, la secuencia se debe reiniciar.
-### Requisitos:
- - Usar punteros
- - Usar retardos no bloqueantes.
+
  
 
