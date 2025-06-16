@@ -1,4 +1,4 @@
-#  Práctica 2: Control básico de salidas digitales 
+#  Práctica 2_A: Control básico de salidas digitales 
 Este proyecto implementa un sistema de **dos secuencias de encendido de LEDs** utilizando la placa **Controllino**.
 El usuario puede seleccionar entre dos patrones de iluminación presionando botones físicos, y también puede detener
 la secuencia con un tercer botón.
