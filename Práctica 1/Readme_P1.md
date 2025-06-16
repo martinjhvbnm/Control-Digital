@@ -10,3 +10,12 @@ secuencial básica en automatización.
  - Fuente de alimentación del tablero.
  - Cable USB tipo B 2.0.
  - PCconArduino IDE instalado y configurado para Controllino
+   
+## Reto
+ UsarelControllinoMegaparacontrolarunamatrizde9LEDsdeltablero,dispuestos en una cuadrícula de 3x3. Los LEDs deben encenderse uno por uno siguiendo un  patrón en espiral, 
+ en el siguiente orden:
+ \begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
