@@ -22,28 +22,24 @@ El objetivo es demostrar el uso de:
 ## Diagrama de estados:
 ![Diagrama de estados del semaforo ](semaforo_estados.png)
 ---
-## Descripción del Código:
-El código se divide en dos partes principales:
-- **Definición de pines y estados:**  
-  Se definen los pines para cada LED utilizando directivas `#define`. También se establecen constantes para los estados de encendido y apagado, y se define una enumeración `Estado` que representa los distintos estados del sistema como se puede observar:
-  
-  
-  ```cpp
-  #define LED_ROJO CONTROLLINO_D0
-  #define LED_AMARILLO CONTROLLINO_D1
-  #define LED_VERDE CONTROLLINO_D2
-  
-  #define LED_ROJO2 CONTROLLINO_D6
-  #define LED_AMARILLO2 CONTROLLINO_D7
-  #define LED_VERDE2 CONTROLLINO_D8
-  
-  #define encendido 1
-  #define apagado 0
-  
-  enum Estado {
-    INICIO,
-    ROJO,
-    VERDE,
-    AMARILLO
-  };
-  
+## Funciones principales
+- setup():
+Configura los pines de los LEDs como salidas y apaga todos los LEDs inicialmente usando la función apagarTodo().
+
+- loop():
+Implementa la máquina de estados:
+
+1. Estado INICIO:
+Parpadea el LED_AMARILLO del primer conjunto y el LED_ROJO2 del segundo conjunto durante 2.5 segundos.
+
+2. Estado ROJO:
+Enciende el LED_ROJO del primer conjunto y el LED_VERDE2 del segundo conjunto por 3 segundos.
+
+3. Estado VERDE:
+Activa el LED_VERDE del primer conjunto y el LED_AMARILLO2 del segundo conjunto durante 2 segundos.
+
+3. Estado AMARILLO:
+Enciende el LED_AMARILLO del primer conjunto y el LED_ROJO2 del segundo conjunto por 2 segundos, y luego regresa al estado ROJO.
+
+- Función apagarTodo():
+Apaga todos los LEDs para reiniciar el estado visual antes de la transición
