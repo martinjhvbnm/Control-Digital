@@ -21,7 +21,7 @@
 ## Reto:
 - Ampliar el programa actual para controlar dos LEDs de forma independiente, utilizando elementos de la interfaz gráfica (spin boxes) para regular el brillo de
  cada LED y botones físicos del tablero para encender y apagar cada uno de ellos.
- 1. Descripción de la actividad:
+Descripción de la actividad:
  - Agregar un segundo widget tipo SpinBox a la interfaz gráfica. Este segundo  SpinBox permitirá controlar el duty cycle (porcentaje deciclodetrabajoPWM)
  del segundo LED conectado al tablero.
  - Configurar dos botones físicos en el tablero:– Elprimer botón físico controlará el encendido/apagado del primer LED.– Elsegundo
