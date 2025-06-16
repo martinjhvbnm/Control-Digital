@@ -1,21 +1,19 @@
 #  Práctica 2: Control básico de salidas digitales 
-Este proyecto implementa un sistema de **dos secuencias de encendido de LEDs** utilizando la placa **Controllino**. El usuario puede seleccionar entre dos patrones de iluminación presionando botones físicos, y también puede detener la secuencia con un tercer botón.
+Este proyecto implementa un sistema de **dos secuencias de encendido de LEDs** utilizando la placa **Controllino**.
+El usuario puede seleccionar entre dos patrones de iluminación presionando botones físicos, y también puede detener
+la secuencia con un tercer botón.
 
 ---
+# Materiales requeridos
+ - Tablero de control con Controllino Mega integrado.
+ - Fuente de alimentación del tablero.
+ - Cable USB tipo B 2.0.
+ - PC con Arduino IDE instalado y configurado para Controllino
 
 ## Objetivo
 
-Implementar control digital de salidas utilizando **temporización no bloqueante (`millis`)**, **arreglos** y **lectura de botones** en una placa **Controllino**. Este tipo de control es útil en sistemas industriales donde múltiples salidas deben activarse en orden con tiempos definidos.
-
----
-
-##  Hardware requerido
-
-- 1 Placa **Controllino Mini / Maxi / Mega**
-- 10 salidas digitales conectadas a LEDs (con resistencias)
-- 3 botones (entradas digitales)
-- Cables y protoboard
-
+- Utilizar los tres botones del tablero de pruebas para controlar el patrón de  encendido de los LED ubicados en forma de matriz 3x3. Tanto los botones
+ como los LED ya se encuentran conectados directamente al Controllino  Mega.
 ---
 
 ##  Entradas y salidas
