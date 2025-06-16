@@ -12,6 +12,8 @@ secuencial básica en automatización.
  - PCconArduino IDE instalado y configurado para Controllino
    
 ## Reto
- UsarelControllinoMegaparacontrolarunamatrizde9LEDsdeltablero,dispuestos en una cuadrícula de 3x3. Los LEDs deben encenderse uno por uno siguiendo un  patrón en espiral, 
- en el siguiente orden:
-<pre> ```text [ 1 2 3 ] [ 4 5 6 ] [ 7 8 9 ] ``` </pre>
+ Usar el Controllino Mega para controlar un amatriz de 9 LEDs del tablero, dispuestos en una cuadrícula de 3x3. Los LEDs deben encenderse uno por uno siguiendo un  patrón en espiral, en el siguiente orden:
+ 
+| LED1  | LED2  | LED3  |
+| LED4  | LED5  | LED6  |
+| LED7  | LED8  | LED9  |
