@@ -10,12 +10,15 @@ la secuencia con un tercer botón.
  - Cable USB tipo B 2.0.
  - PC con Arduino IDE instalado y configurado para Controllino
 
-## Objetivo
+## Reto
 
-- Utilizar los tres botones del tablero de pruebas para controlar el patrón de  encendido de los LED ubicados en forma de matriz 3x3. Tanto los botones
+- Utilizar los tres botones del tablero de pruebas para controlar el patrón de encendido de los LED ubicados en forma de matriz 3x3. Tanto los botones
  como los LED ya se encuentran conectados directamente al Controllino  Mega.
----
+- Botón1: Encendido en espiral normal.
+– Botón2: Encendido en espiral inverso.
+– Botón3: Reinicia y apaga todos los LEDs.
 
+---
 ##  Entradas y salidas
 
 | Elemento              | Pin Controllino |
