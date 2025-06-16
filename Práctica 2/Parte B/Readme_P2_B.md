@@ -43,3 +43,5 @@ Enciende el LED_AMARILLO del primer conjunto y el LED_ROJO2 del segundo conjunto
 
 - Función apagarTodo():
 Apaga todos los LEDs para reiniciar el estado visual antes de la transición
+- Variables temporales:
+Se utilizan variables para medir intervalos de tiempo y manejar la duración de cada estado.
