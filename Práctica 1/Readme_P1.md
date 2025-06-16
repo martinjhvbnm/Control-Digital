@@ -6,7 +6,7 @@ El objetivo es comprender cómo utilizar dichas variables para generar una secue
 secuencial básica en automatización.
 
 ##  Materiales requeridos
- • Tablero de control con Controllino Mega integrado.
- • Fuente de alimentación del tablero.
- • Cable USB tipo B 2.0.
- • PCconArduino IDE instalado y configurado para Controllino
+ - Tablero de control con Controllino Mega integrado.
+ - Fuente de alimentación del tablero.
+ - Cable USB tipo B 2.0.
+ - PCconArduino IDE instalado y configurado para Controllino
