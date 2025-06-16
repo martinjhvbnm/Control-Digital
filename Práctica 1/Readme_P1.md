@@ -24,7 +24,7 @@ secuencial básica en automatización.
 - CadaLEDdebeencenderse durante 500 ms y luego apagarse, justo en ese  instante se enciende el siguiente.
 - Al finalizar, la secuencia se debe reiniciar.
 ### Requisitos:
- -Usar punteros.
- -Usar retardos no bloqueantes.
+ - Usar punteros
+ - Usar retardos no bloqueantes.
  
 
