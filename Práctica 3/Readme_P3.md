@@ -84,4 +84,4 @@ La comunicación se gestiona con funciones `HMI_get_value` y `Stone_HMI_Set_Valu
 - `Stone_HMI_Define.h`: Definiciones específicas para el modelo de pantalla Stone usado
 
 ## Ejemplo de interfaz HMI
-![Interfaz HMI con spin boxes](docs/hmi_example.png)
+![Interfaz HMI con spin boxes](pantallap3.png)
