@@ -1,5 +1,5 @@
 # Control-Digital
-## Practicas de Control Digital con Controllino & HMI Stone
+## Prácticas de Control Digital con Controllino & HMI Stone
 
 Este repositorio agrupa una serie de **proyectos prácticos** realizados con la plataforma **Controllino**, integrando sensores, actuadores, pantallas HMI (Stone) y técnicas modernas de **automatización y control**.
 
@@ -25,9 +25,9 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 ## Autores
 
 **Martin Bravo**  
- - Desarrollador principal, pruebas e integración de controladores PID, HMI y sistemas embebidos  
+  
   GitHub: [@martinjhvbnm](https://github.com/martinjhvbnm)
 --- 
 **Miguel Ángel Calle Durán**  
- - Desarrollador principal, pruebas e integración de controladores PID, HMI y sistemas embebidos  
+
   GitHub: [@miki9810](https://github.com/miki9810)
