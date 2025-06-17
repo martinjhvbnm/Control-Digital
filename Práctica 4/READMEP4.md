@@ -70,32 +70,33 @@
 
 ---
 
-## 🧠 Lógica del control PID
+## Lógica del control PID
 
 - Se utiliza la **forma discreta por ecuación de recurrencias** para calcular `u(t)`:
   
 ```math
 u[k] = u[k-1] + Kp * (e[k] - e[k-1]) + (T * Ki) * e[k] + (Kd / T) * (e[k] - 2e[k-1] + e[k-2]) 
 ```
-- Se limita la salida de u(t) entre 0 y 255 antes de enviarla al motor mediante analogWrite.
+- Se limita la salida de u(t) entre 0 y 255 antes de enviarla al motor mediante `analogWrite`.
 --- 
-## Lógica del programa
+## Interrupciones y temporización
+- TIMER1: genera una interrupción cada 50 ms (frecuencia de muestreo fs = 20 Hz) para:
+  -Calcular la velocidad RPM
+  -Evaluar el PID
+  -Aplicar analogWrite al motor
 
-1. **Inicialización**:
-   - Se configuran pines de entrada y salida.
-   - Se inicializa la comunicación serial y la pantalla HMI.
-
-2. **Botones físicos**:
-   - Se detectan flancos ascendentes para cambiar el estado de cada LED (encendido ↔ apagado).
-   - Se usa una bandera por LED (`bandera`, `bandera2`) para rastrear su estado.
-3. **Control PWM**:
-   - Solo si el LED está encendido (bandera == 1), se lee el valor del HMI y se mapea de 0–100 a 0–255 para el `analogWrite`.
+- INTERRUPT FALLING sobre IN1: incrementa contador de pulsos del encoder.
+- millis(): se usa para retardo no bloqueante en lectura y envío a HMI.
 ---
-## Archivos
+## Comunicación con el HMI
+Se manejan etiquetas y widgets específicos:
 
-- `main.ino`: Código principal del sistema
-- `Procesar_HMI.h`: Módulo que contiene funciones auxiliares para comunicarse con la pantalla HMI
-- `Stone_HMI_Define.h`: Definiciones específicas para el modelo de pantalla Stone usado
+|Etiqueta	    | Uso                          |
+--------------------------------------
+|label2	      | Muestra la referencia actual |
+|label4	      | Muestra las RPM actuales     |
+|line_series1	| Gráfica de referencia        |
+|line_series2	|Gráfica de RPM medidas        |
+|line_series3	|Gráfica de señal de control   |
 
-## Ejemplo de interfaz HMI
-![Interfaz HMI con spin boxes](pantallap3.png)
+
