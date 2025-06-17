@@ -63,7 +63,7 @@
 
 | Componente HMI | Función              | Rango sugerido |
 |----------------|----------------------|----------------|
-| `slider1`      | Referencia (RPM)     | 0 – 100        |
+| `slider1`      | Referencia (RPM)     | 0 – 4000       |
 | `spin_box1`    | `Kp` (proporcional)  | 0.01 – 1.00    |
 | `spin_box2`    | `Ki` (integral)      | 0.01 – 1.00    |
 | `spin_box3`    | `Kd` (derivativo)    | 0.001 – 1.00   |
