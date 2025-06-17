@@ -32,16 +32,20 @@
  recurrencias (no se permite el uso de librerías PID externas).
 
 ---
-## Descripción general
+## Caracteristicas
 
-Este sistema permite:
+###Este sistema permite:
 
-- Encender/apagar LED1 con el botón físico 1 (I16)
-- Encender/apagar LED2 con el botón físico 2 (I17)
-- Controlar la intensidad de cada LED (PWM) desde la pantalla HMI usando dos spin boxes:
-  - `spin_box1`: controla el duty cycle de LED1
-  - `spin_box2`: controla el duty cycle de LED2
-- Mostrar los valores PWM correspondientes en el monitor serial para depuración
+- Lectura de la referencia desde un `slider` en la pantalla HMI.
+- Ajuste de parámetros PID (`Kp`, `Ki`, `Kd`) mediante `spin boxes`.
+- Medición de la velocidad del motor en **RPM** a través de pulsos de un encoder.
+- Aplicación de control PID en tiempo real usando **ecuación de recurrencias**.
+- Visualización de:
+  - Referencia
+  - Velocidad del motor (RPM)
+  - Señal de control `u(t)`
+  - Todo mostrado en una gráfica del HMI.
+  - Comunicación serial bidireccional entre el HMI y el Controllino.
 ---
 ## Configuración del sistema
 
