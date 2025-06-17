@@ -100,7 +100,10 @@ Se manejan etiquetas y widgets específicos:
 |line_series3	|Gráfica de señal de control   |
 ---
 ## Archivos incluidos
-- main.ino: Código fuente principal.
+- PID.ino: Código fuente principal.
+- FuncionTransferenciaPID.m
+- LecturaDatosMotorLabView.vi
 - Procesar_HMI.h: Funciones auxiliares para leer valores del HMI.
 -  Stone_HMI_Define.h: Definiciones para la pantalla HMI Stone.
+-  interfazpid.st
 
