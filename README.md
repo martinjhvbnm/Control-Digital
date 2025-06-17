@@ -26,6 +26,7 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 **Martin Bravo**  
   Desarrollador principal, pruebas e integración de controladores PID, HMI y sistemas embebidos  
   GitHub: [@martinjhvbnm](https://github.com/martinjhvbnm)
+--- 
 **Miguel Ángel Calle Durán**  
   Desarrollador principal, pruebas e integración de controladores PID, HMI y sistemas embebidos  
   GitHub: [@miki9810]([https://github.com/tu_usuario](https://github.com/miki9810))
