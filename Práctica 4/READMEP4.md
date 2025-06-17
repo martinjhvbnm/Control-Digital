@@ -92,7 +92,7 @@ u[k] = u[k-1] + Kp * (e[k] - e[k-1]) + (T * Ki) * e[k] + (Kd / T) * (e[k] - 2e[k
 Se manejan etiquetas y widgets específicos:
 
 |Etiqueta	    | Uso                          |
---------------------------------------
+|-------------|------------------------------|
 |label2	      | Muestra la referencia actual |
 |label4	      | Muestra las RPM actuales     |
 |line_series1	| Gráfica de referencia        |
