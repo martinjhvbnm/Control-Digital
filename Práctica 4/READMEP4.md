@@ -49,24 +49,36 @@
 ---
 ## Configuración del sistema
 
-### Pines utilizados en el Controllino:
+### Conexiones
 
-| Elemento       | Pin Controllino |
-|----------------|-----------------|
-| LED1 (PWM)     | D0              |
-| LED2 (PWM)     | D1              |
-| Botón LED1     | I16             |
-| Botón LED2     | I17             |
+| Elemento           | Pin Controllino  |
+|--------------------|------------------|
+| PWM al motor       | D0               |
+| Entrada de encoder | IN1              |
+| HMI (Serial2)      | TX2 / RX2        |
 
-### Pantalla HMI
+---
 
-Se comunica por `Serial2` a 115200 baudios. Se esperan dos componentes configurados:
+### Variables de entrada desde HMI
 
-- `spin_box1`: valor 0–100 para duty cycle de LED1
-- `spin_box2`: valor 0–100 para duty cycle de LED2
+| Componente HMI | Función              | Rango sugerido |
+|----------------|----------------------|----------------|
+| `slider1`      | Referencia (RPM)     | 0 – 100        |
+| `spin_box1`    | `Kp` (proporcional)  | 0.01 – 1.00    |
+| `spin_box2`    | `Ki` (integral)      | 0.01 – 1.00    |
+| `spin_box3`    | `Kd` (derivativo)    | 0.001 – 1.00   |
 
-La comunicación se gestiona con funciones `HMI_get_value` y `Stone_HMI_Set_Value`.
+---
 
+## 🧠 Lógica del control PID
+
+- Se utiliza la **forma discreta por ecuación de recurrencias** para calcular `u(t)`:
+  
+```math
+u[k] = u[k-1] + Kp * (e[k] - e[k-1]) + (T * Ki) * e[k] + (Kd / T) * (e[k] - 2e[k-1] + e[k-2]) 
+```
+- Se limita la salida de u(t) entre 0 y 255 antes de enviarla al motor mediante analogWrite.
+--- 
 ## Lógica del programa
 
 1. **Inicialización**:
