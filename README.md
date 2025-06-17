@@ -24,7 +24,7 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 - (Opcional) NI LabVIEW para simulaciones para sacar funcion de transferencia
 ## Autores
 
-**Martin Bravo**  
+**Martín Bravo**  
   
   GitHub: [@martinjhvbnm](https://github.com/martinjhvbnm)
 --- 
