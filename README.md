@@ -9,7 +9,7 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 ## Contenido del repositorio
 
 | Proyecto | Descripción | 
-|---------|-------------|--------------------------|
+|---------|-------------|
 | ` Práctica 1: Manejo de Salidas Digitales con Controllino Mega` |  Usar el Controllino Mega para controlar una matriz de 9 LEDs del tablero,dispuestos
  en una cuadrícula de 3x3 | 
 | `Práctica 2: Control básico de salidas digitales y aplicación avanzada con FSM` | Parte A: Utilizar los tres botones del tablero de pruebas para controlar el patrón de encendido de los LED, Parte B:Maquina de estados para un semaforo simple| 
