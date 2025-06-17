@@ -30,4 +30,4 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 --- 
 **Miguel Ángel Calle Durán**  
  - Desarrollador principal, pruebas e integración de controladores PID, HMI y sistemas embebidos  
-  GitHub: [@miki9810]((https://github.com/miki9810))
+  GitHub: [@miki9810](https://github.com/miki9810)
