@@ -98,6 +98,11 @@ Se manejan etiquetas y widgets específicos:
 |line_series1	| Gráfica de referencia        |
 |line_series2	|Gráfica de RPM medidas        |
 |line_series3	|Gráfica de señal de control   |
+
+---
+## Interfaz grafica
+
+![interfaz grafica ](image.png)
 ---
 ## Archivos incluidos
 - PID.ino: Código fuente principal.
