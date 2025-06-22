@@ -26,6 +26,7 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 - NI myDAQ
 - NI LabVIEW para simulaciones para sacar funcion de transferencia
 ## Autores
+
 ---
 **Martín Bravo**  
   
