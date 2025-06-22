@@ -18,12 +18,14 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 
 - [Controllino](https://controllino.biz/) (Mega)
 - Pantalla HMI STONE (serial TTL, 115200 baudios)
+- Librería Stone_HMI_Define.h       
+- Librería adicional Procesar_HMI.h         
 - Motor con encoder (36 pulsos/rev)
 - Fuente de alimentación para motor
 - Software: Arduino IDE o PlatformIO
 - (Opcional) NI LabVIEW para simulaciones para sacar funcion de transferencia
 ## Autores
-
+---
 **Martín Bravo**  
   
   GitHub: [@martinjhvbnm](https://github.com/martinjhvbnm)
