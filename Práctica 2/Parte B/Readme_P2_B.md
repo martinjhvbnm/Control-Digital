@@ -4,8 +4,8 @@
 ![Circulacion vehicular simple ](image.png)
 
 
-Imagen tomada de cebasf1, Proyecto semáforo, Apr. 2011. [Online]. Available: https://cebasf1.
-wordpress.com/2011/04/04/proyecto-semaforo/.
+Imagen tomada de cebasf1, Proyecto semáforo, Apr. 2011. 
+https://cebasf1.wordpress.com/2011/04/04/proyecto-semaforo/.
 
 ---
 ## Materiales requeridos
