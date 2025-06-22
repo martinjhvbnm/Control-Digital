@@ -5,7 +5,8 @@
 
 
 Imagen tomada de cebasf1, Proyecto semáforo, Apr. 2011. 
-- https://cebasf1.wordpress.com/2011/04/04/proyecto-semaforo/.
+
+https://cebasf1.wordpress.com/2011/04/04/proyecto-semaforo/.
 
 ---
 ## Materiales requeridos
