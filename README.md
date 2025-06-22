@@ -22,8 +22,9 @@ Está diseñado con fines **educativos** y puede servir como base para aplicacio
 - Librería adicional Procesar_HMI.h         
 - Motor con encoder (36 pulsos/rev)
 - Fuente de alimentación para motor
-- Software: Arduino IDE o PlatformIO
-- (Opcional) NI LabVIEW para simulaciones para sacar funcion de transferencia
+- Software: Arduino IDE 
+- NI myDAQ
+- NI LabVIEW para simulaciones para sacar funcion de transferencia
 ## Autores
 ---
 **Martín Bravo**  
